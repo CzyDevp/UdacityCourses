@@ -4,5 +4,4 @@ This is a exercise repository for Developing Android Apps. You can learn more ab
 <b> Udacity courses implemented here.  It consists all the coursework based on Kotlin, Flutter, Dart, java8. </b>
 ![alt text](https://github.com/CzyDevp/UdacityCourses/blob/master/andy.jpg)
 ![alt text](https://github.com/CzyDevp/UdacityCourses/blob/master/flutter.jpg)
-![alt text](https://github.com/CzyDevp/UdacityCourses/blob/master/kt.png)
-
+![alt text](https://github.com/CzyDevp/UdacityCourses/blob/master/kt.png) 
