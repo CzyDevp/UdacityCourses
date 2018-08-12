@@ -14,22 +14,17 @@
  * limitations under the License.
  */
 package com.example.android.sunshine.utilities;
-
 import android.content.Context;
 import android.util.Log;
-
 import com.example.android.sunshine.R;
 import com.example.android.sunshine.data.SunshinePreferences;
-
 /**
  * Contains useful utilities for a weather app, such as conversion between Celsius and Fahrenheit,
  * from kph to mph, and from degrees to NSEW.  It also contains the mapping of weather condition
  * codes in OpenWeatherMap to strings.  These strings are contained
  */
 public final class SunshineWeatherUtils {
-
     private static final String LOG_TAG = SunshineWeatherUtils.class.getSimpleName();
-
     /**
      * This method will convert a temperature from Celsius to Fahrenheit.
      *

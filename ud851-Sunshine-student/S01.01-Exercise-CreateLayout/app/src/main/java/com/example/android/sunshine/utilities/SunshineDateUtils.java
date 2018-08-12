@@ -14,12 +14,9 @@
  * limitations under the License.
  */
 package com.example.android.sunshine.utilities;
-
 import android.content.Context;
 import android.text.format.DateUtils;
-
 import com.example.android.sunshine.R;
-
 import java.text.SimpleDateFormat;
 import java.util.TimeZone;
 
