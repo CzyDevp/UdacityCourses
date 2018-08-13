@@ -24,19 +24,16 @@
         android:text="error"
         android:paddingLeft="20sp"
         android:visibility="invisible"/>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp">
-
         <TextView
             android:id="@+id/tv_weather_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:textSize="20sp" />
-
     </ScrollView>
     <ProgressBar
         android:layout_width="40dp"
