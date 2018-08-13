@@ -14,11 +14,10 @@
  * limitations under the License.
  */
 package com.example.android.sunshine;
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     @Override
@@ -27,7 +26,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_forecast);
         textView = findViewById(R.id.tv_weather_data);
         String[] dummyWeather = getDummyWeather();
-        Arrays.stream(dummyWeather).forEach(str-> textView.append(str + "\n\n"));
+        //Arrays.stream(dummyWeather).forEach(str-> textView.append(str + "\n\n"));
+        //Stream.of(dummyWeather).forEach(str-> textView.append(str + "\n\n"));
+        for (String str: dummyWeather){
+            textView.append(str+"\n\n\n");
+        }
     }
     public String[] getDummyWeather(){
         String[] dummyWeatherData = {
