@@ -45,14 +45,12 @@ public final class NetworkUtils {
      * a real API.If you want to connect your app to OpenWeatherMap's API, feel free to! However,
      * we are not going to show you how to do so in this course.
      */
-
     /* The format we want our API to return */
     private static final String format = "json";
     /* The units we want our API to return */
     private static final String units = "metric";
     /* The number of days we want our API to return */
     private static final int numDays = 14;
-
     final static String QUERY_PARAM = "q";
     final static String LAT_PARAM = "lat";
     final static String LON_PARAM = "lon";
@@ -67,27 +65,23 @@ public final class NetworkUtils {
      * @param locationQuery The location that will be queried for.
      * @return The URL to use to query the weather server.
      */
-    public static URL buildUrl(String locationQuery)
-    {
+    public static URL buildUrl(String locationQuery){
         // TODO (1) Fix this method to return the URL used to query Open Weather Map's API
-        Uri builton = Uri.parse(DYNAMIC_WEATHER_URL).buildUpon()
+        Uri builtOn = Uri.parse(DYNAMIC_WEATHER_URL).buildUpon()
                 .appendQueryParameter(QUERY_PARAM,locationQuery)
                 .appendQueryParameter(FORMAT_PARAM,format)
                 .appendQueryParameter(UNITS_PARAM,units)
                 .appendQueryParameter(DAYS_PARAM,Integer.toString(numDays))
                 .build();
         URL url = null;
-        try
-        {
-            url = new URL(builton.toString());
+        try{
+            url = new URL(builtOn.toString());
         }
-        catch (MalformedURLException e)
-        {
+        catch (MalformedURLException e){
             e.printStackTrace();
         }
         return url;
     }
-
     /**
      * Builds the URL used to talk to the weather server using latitude and longitude of a
      * location.
@@ -100,7 +94,6 @@ public final class NetworkUtils {
         /** This will be implemented in a future lesson **/
         return null;
     }
-
     /**
      * This method returns the entire result from the HTTP response.
      *
@@ -108,22 +101,17 @@ public final class NetworkUtils {
      * @return The contents of the HTTP response.
      * @throws IOException Related to network and stream reading
      */
-    public static String getResponseFromHttpUrl(URL url) throws IOException
-    {
+    public static String getResponseFromHttpUrl(URL url) throws IOException{
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         try {
             InputStream in = urlConnection.getInputStream();
-
             Scanner scanner = new Scanner(in);
             scanner.useDelimiter("\\A");
-
             boolean hasInput = scanner.hasNext();
-            if (hasInput) {
-                return scanner.next();
-            } else {
-                return null;
-            }
-        } finally {
+            if (hasInput) return scanner.next();
+             else return null;
+        }
+        finally {
             urlConnection.disconnect();
         }
     }
