@@ -32,18 +32,15 @@ import com.example.android.sunshine.utilities.OpenWeatherJsonUtils;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-
     private TextView mWeatherTextView, errorView;
     private ProgressBar progressBar;
     // TODO (6) Add a TextView variable for the error message display
 
     // TODO (16) Add a ProgressBar variable to show and hide the progress bar
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forecast);
-
         /*
          * Using findViewById, we get a reference to our TextView from xml. This allows us to
          * do things like set the text of the TextView.
@@ -119,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
             else
                 showError();
             // TODO (10) If the weather data was null, show the error message
-
         }
     }
 
